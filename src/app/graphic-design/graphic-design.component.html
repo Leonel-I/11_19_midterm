@@ -1,14 +1,16 @@
 <h3>Graphic Design Portfolio</h3>
 <div class="w3-container">
-  
+
 <div *ngFor="let item of portfolioItems | async">
-  <h1>{{ item.caption }}</h1>
 
-  <img src="{{ item.src }}" 
-  alt="{{ item.caption}}"  width="275" (click)="open(i)" />
-   <div class="w3-container">
-     
+        <div class="w3-card">
+           <img src="{{ item.src }}" 
+  alt="{{ item.caption}}"  width="275"  (click)="open(i)" />
+          <div class="w3-container">
+            <h5>{{ item.caption }}</h5>
+          </div>
 
-</div>
-
+      </div>
+    </div>
+  </div>
 
